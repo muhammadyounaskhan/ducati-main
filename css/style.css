@@ -712,6 +712,10 @@ img {
   column-gap: 2rem;
   row-gap: 2rem;
 }
+.sub_links .sub_links_left a {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
 .sub_links .sub_links_right {
   flex: 0 0 300px;
   width: 25%;
@@ -803,6 +807,7 @@ img {
   }
   .sub_links .sub_links_left .bike .bike_title {
     font-size: 0.8rem;
+    font-weight: 600;
     cursor: pointer;
     display: grid;
     grid-template-columns: 4fr 1fr;
@@ -823,7 +828,7 @@ img {
     row-gap: 0.8rem;
     cursor: pointer;
   }
-  .sub_links .sub_links_left .bike .bike:hover svg {
+  .sub_links .sub_links_left .bike:hover svg {
     fill: #0f0f0f;
   }
 }

@@ -294,7 +294,6 @@ img {
   transition: all 0.2s;
   height: 50vh;
   overflow: auto;
-
   .sub_links_left {
     padding-bottom: 2rem;
     flex: 1 1 500px;
@@ -304,6 +303,10 @@ img {
     flex-wrap: wrap;
     column-gap: 2rem;
     row-gap: 2rem;
+    a {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
   }
 
   .sub_links_right {
@@ -403,6 +406,7 @@ img {
       }
       .bike_title {
         font-size: 0.8rem;
+        font-weight: 600;
         cursor: pointer;
         display: grid;
         grid-template-columns: 4fr 1fr;
@@ -423,7 +427,7 @@ img {
         row-gap: 0.8rem;
         cursor: pointer;
       }
-      .bike:hover svg {
+      &:hover svg {
         fill: $primary-black;
       }
     }
