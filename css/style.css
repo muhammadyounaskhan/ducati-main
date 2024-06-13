@@ -794,7 +794,7 @@ img {
     padding-left: 1rem;
     font-size: 0.8rem;
     top: 1.1rem;
-    left: 285px;
+    left: 51%;
     border-left: 1px solid #ddd;
   }
   .sub_links .sub_links_left .bike .bike_title {
@@ -808,11 +808,18 @@ img {
   .sub_links .sub_links_left .bike .bike_title svg {
     display: block;
     justify-self: right;
+    fill: grey;
+  }
+  .sub_links .sub_links_left .bike .bike_title:hover {
+    color: #0f0f0f;
   }
   .sub_links .sub_links_left .bike .bike_title:hover + .content {
     display: flex;
     flex-direction: column;
     row-gap: 0.8rem;
+  }
+  .sub_links .sub_links_left .bike .bike_title:hover svg {
+    fill: #0f0f0f;
   }
 }
 /*
