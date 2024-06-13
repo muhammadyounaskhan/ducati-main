@@ -298,13 +298,10 @@ img {
     padding: 3.5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     column-gap: 2rem;
     row-gap: 2rem;
   }
-  .sub_links_left:last-child {
-    display: none;
-  }
+
   .sub_links_right {
     flex: 0 0 300px;
     width: 25%;
@@ -345,6 +342,14 @@ img {
     font-weight: 400;
     color: grey;
     text-transform: uppercase;
+    svg {
+      display: none;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
   }
   .bike_type {
     font-size: 0.8rem;
@@ -354,71 +359,61 @@ img {
     min-width: 100px;
   }
 }
-#sub_links_left {
-  display: none;
-}
+
 /*#<============[LINKS FOR SMALLER SCREEN]============>#*/
+// @media screen and (max-width: 990px) {
 @media screen and (max-width: 990px) {
-  .sub_links_left:first-child {
-    display: none;
+  .sub_links_left {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
-  #sub_links_left {
-    display: block;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 1rem;
-    .left-column {
-      display: flex;
-      flex-direction: column;
-      row-gap: 1rem;
-      padding-bottom: 2rem;
+  .sub_links_right {
+    flex: 0 0 250px !important;
+  }
+  .sub_links .sub_links_left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    flex-wrap: nowrap;
+    height: auto;
+    height: 100%;
+    .bike {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem;
+      padding: 0;
+      .content {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        padding-left: 1rem;
+        font-size: 0.8rem;
+        top: 1.1rem;
+        left: 285px;
+        border-left: 1px solid #ddd;
+      }
       .bike_title {
+        font-size: 0.8rem;
         cursor: pointer;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 4fr 1fr;
+        column-gap: 2rem;
         align-items: center;
         svg {
-          justify-self: end;
+          display: block;
+          justify-self: right;
         }
       }
-    }
 
-    .right-column {
-      .content {
+      .bike_title:hover + .content {
         display: flex;
         flex-direction: column;
-        row-gap: 0.5rem;
-        border-left: 1px solid #dddd;
-        padding: 0 1rem 1rem 1rem;
-        margin-bottom: 1rem;
+        row-gap: 0.8rem;
       }
-      .content:not(:first-child) {
-        display: none;
-      }
-    }
-    .right-icon {
-      width: 10px;
-      color: red;
-      justify-self: end;
     }
   }
 }
-// @media screen and (max-width: 990px) {
-//   #title-1:hover ~ .right-column #content-1,
-//   #title-2:hover ~ .right-column #content-2,
-//   #title-3:hover ~ .right-column #content-3,
-//   #title-4:hover ~ .right-column #content-4,
-//   #title-5:hover ~ .right-column #content-5,
-//   #title-6:hover ~ .right-column #content-6,
-//   #title-7:hover ~ .right-column #content-7,
-//   #title-8:hover ~ .right-column #content-8,
-//   #title-9:hover ~ .right-column #content-9,
-//   #title-10:hover ~ .right-column #content-10,
-//   #title-11:hover ~ .right-column #content-11,
-//   #title-12:hover ~ .right-column #content-12 {
-//     display: block;
-//   }
-// }
 /*
 #<=====================================================>
 #                 Overlay body
