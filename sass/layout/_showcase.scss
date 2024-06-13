@@ -1,0 +1,260 @@
+.showcase {
+  padding-top: 7rem;
+  overflow: auto;
+}
+.showcase::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+  height: 5px;
+}
+
+.showcase::-webkit-scrollbar-track {
+  background: #e1e1e1; /* Color of the scrollbar track */
+  height: 3px;
+  border-radius: 5px;
+  width: 95vw;
+}
+
+.showcase::-webkit-scrollbar-thumb {
+  background: #cc0000; /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners for the scrollbar thumb */
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb:hover {
+  width: 20px; /* Thicker width when hovered */
+  scrollbar-width: auto;
+  scrollbar-width: thin;
+}
+.showcase::-webkit-scrollbar-track-piece:end {
+  margin-right: 2rem;
+}
+.showcase::-webkit-scrollbar-track-piece:start {
+  margin-left: 2rem;
+}
+.cards {
+  padding-inline: 1.5rem;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  display: flex;
+}
+.card {
+  flex: 0 0 350px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-right: 2rem;
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.image-container {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-image,
+.hover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-image {
+  opacity: 0;
+}
+
+.card:hover .hover-image {
+  opacity: 1;
+}
+
+.card:hover .card-image {
+  opacity: 0;
+}
+.card:hover .name {
+  border-bottom: 3px solid #cc0000;
+}
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.shop-card {
+  box-shadow: $box-shadow-down;
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+    width: 95.5%;
+    padding: 1.5rem;
+    padding-top: 3.5rem;
+    margin-inline: auto;
+  }
+  .arrows {
+    position: absolute;
+    right: 22px;
+    bottom: 30px;
+    display: flex;
+    width: 40px;
+    column-gap: 25px;
+    align-items: center;
+    .arrow-small-left,
+    .arrow-small-right {
+      width: 7px;
+    }
+    @media screen and (max-width: 1000px) {
+      bottom: auto;
+      right: auto;
+      left: 1.5rem;
+      top: 20px;
+    }
+  }
+  .icon--modal-close {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 1000px) {
+    .icon {
+      width: 17px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  /*#<============[Left part]============>#*/
+  .shop-image-container {
+    width: 50%;
+    position: relative;
+    min-height: 250px;
+    @media screen and (max-width: 1000px) {
+      height: 400px;
+      width: 100%;
+    }
+    .terms_box {
+      width: 35%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.01)
+      );
+
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 1rem;
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
+      &::before {
+        content: "";
+        height: 80%;
+        width: 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-right: 1px solid $primary-white;
+      }
+
+      .term {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .term_value,
+      .term_label {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        color: $primary-white;
+        font-weight: 400;
+      }
+      .term_label {
+        font-size: 0.8rem;
+      }
+    }
+    .shop_image {
+      display: block;
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  /*#<============[Right Part]============>#*/
+  .shop_content {
+    padding: 10px 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      padding: 0;
+      padding-top: 2rem;
+    }
+  }
+  .title-cross {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+  .title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+  .icon {
+    width: 20px;
+  }
+  .description-inner {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 5rem;
+  }
+  .price-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  .price {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .info_cirle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    font-size: 0.8rem;
+    background-color: $primary-black;
+    color: $primary-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+  }
+  .buttons {
+    display: flex;
+    column-gap: 1rem;
+  }
+}

@@ -1,0 +1,152 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.red_button {
+  background-color: #e90000;
+  box-shadow: inset 0 -4px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 2px;
+  color: #fafafa;
+  text-transform: uppercase;
+  &__position {
+    position: absolute;
+    z-index: 300;
+    right: 40px;
+    bottom: -40%;
+
+    @media screen and (max-width: 1000px) {
+      right: 76%;
+      left: 2rem;
+    }
+  }
+}
+.size-1 {
+  padding: 1rem 1rem;
+  font-size: 1rem;
+}
+.size-2 {
+  padding: 1.2rem 2.3rem;
+  min-width: 200px;
+}
+.white-button {
+  border: none;
+  box-shadow: inset 0 -5px 25px rgba(0, 0, 0, 0.1);
+  font-weight: 700;
+  border-radius: 2px;
+  background-color: #fafafa;
+  color: $primary-black;
+  text-transform: uppercase;
+}
+//hamburger
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition-duration: 0.3s;
+}
+
+.bars {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition-duration: 0.3s;
+}
+.toggle .bars {
+  margin-left: 13px;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: rotate(135deg);
+  margin-left: 0;
+  transform-origin: center;
+  transition-duration: 0.3s;
+  opacity: 0;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  transform: rotate(45deg);
+  transition-duration: 0.3s;
+  transform-origin: left center;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  transform: rotate(-45deg);
+  transition-duration: 0.3s;
+  transform-origin: left center;
+}
+//whiteRound Button
+.circular-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: #fafafa;
+  color: $primary-black;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+.circular-button:hover {
+  background-color: $primary-white;
+}
+.black-round-btn {
+  background-color: $primary-black;
+  color: $primary-white;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.6rem 1rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 100px;
+}
+
+.container-btn {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.new-btn {
+  background-color: #cc0000;
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  color: $primary-white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: absolute;
+  top: -30px;
+  left: 10px;
+  z-index: 5;
+}
+.grey-border-btn {
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 2px solid $light-grey;
+  background-color: transparent;
+  color: $light-grey;
+  text-transform: uppercase;
+  padding: 1rem 1.8rem;
+  cursor: pointer;
+}
+.btn-div {
+  text-align: center;
+}

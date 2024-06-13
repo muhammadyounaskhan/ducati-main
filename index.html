@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Ducati</title>
+</head>
+<body>
+    <div class="overlay-body" id="overlay-body"></div>
+    <!--#<============[Floated SIZE DIV]============>#-->
+    <div id="viewportWidth"></div>
+    <nav class="nav">
+        <div class="left">
+            <svg viewBox="0 0 80 29" id="logo-scrambler"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path
+                     d="M42.6 24.3c-.1.7-.2 1.2-.4 1.5-.2.3-.5.5-.9.6H41l.4-4h.3c.5-.1.7.1.8.4.2.3.2.8.1 1.5m-.5-3.5l-3.3.4-.7 7.3 3.5-.4c2.2-.2 3.7-1.8 3.9-3.9.2-2.3-.5-3.7-3.4-3.4M50.5 19.9l-.5 4.7c-.1.6-.3.8-.6.9-.3 0-.5-.2-.5-.7l.5-4.7-2.8.3-.5 4.8c-.2 1.7 1 2.5 3.1 2.2 2.1-.2 3.5-1.2 3.6-3l.5-4.8-2.8.3zM57.9 23.6c-.1.8-.4 1-.7 1.1-.7.1-.7-.7-.6-1.9.1-1.2.3-1.9 1-2 .3 0 .6.1.6.9l2.6-.3c.2-2.1-1.2-2.7-3-2.5-2.4.3-3.9 1.9-4 4.2-.2 2.3.8 3.7 3.3 3.4 1.8-.2 3.4-1.2 3.6-3.2l-2.8.3zM65 22.5l-1.2.1.9-2.8.3 2.7zm-1.9-4l-3 7.5 2.7-.3.4-1.2 2-.2.2 1.1 2.9-.3-1.6-7-3.6.4zM74.4 17.2l-6.3.7-.2 2 1.8-.2-.6 5.3 2.8-.3.6-5.4 1.7-.1zM74.9 17.1l-.7 7.3 2.8-.3.7-7.3zM3.8 11.34l2.9 9.9v.6c-.1.8-.8 1.6-1.7 1.7l-5 .6.3-2.8 3.2-.4c.2 0 .4-.2.4-.4v-.1L1 10.84c0-.2-.1-.5-.1-.7.1-.9.9-1.7 1.8-1.8l4.9-.5-.4 2.8-3 .3c-.2 0-.3.2-.4.4zm8.2-.9l-.9 9.3c0 .2.1.3.3.3l2.7-.3-.3 2.8-4.3.5c-.9.1-1.5-.5-1.5-1.3v-.1l1.2-12.4c.1-.9.9-1.7 1.7-1.8l4.3-.5-.2 2.7-2.7.3c-.2.1-.3.3-.3.5zm9.4 3.5l.4-4.6c0-.2-.1-.4-.3-.4l-1.8.2-.5 5.5 1.8-.2c.2 0 .4-.2.4-.5zm1.1 3.1l1 4.4-2.9.3-1-4.4-.6.1-.4 4.6-2.9.3 1.5-15.6 2-.2.8-.2 3.4-.4c.9 0 1.6.6 1.5 1.5l-.7 7.8c-.2.9-.9 1.6-1.7 1.8zm5.9-.5l1.5-.2-.2-5.6-1.3 5.8zm1.6 2.4l-2.2.2-.4 1.9-3.2.3 4.4-16 .9-.1 1.5-.1.9-.1 1.3 15.4-3.1.3-.1-1.8zm8.6-14.7l1 6.6 2.5-7h.3l2.9-.3-1.5 15.7-2.9.3.7-7.1-1.4 3.3-1.3 2.9-1.3-5.6-.7 6.9-2.9.3 1.5-15.7h.2l2.7-.3h.2zm14.2 6.2c.7-.1 1.1.4 1.1 1l-.5 5.1c-.1.9-.9 1.7-1.7 1.8l-3.4.4-2.9.3 1.4-15.6 2-.2.9-.1 3.4-.4c.9-.1 1.5.5 1.4 1.4l-.5 4.9c0 .7-.6 1.3-1.2 1.4zm-3.7-.5l2.1-.2.3-3.6c0-.2-.1-.4-.3-.4l-1.8.2-.3 4zm1.9 2.2l-2.1.2-.3 3.6 1.8-.2c.2 0 .4-.2.4-.4l.2-3.2zm10 5.2l-3.2.4-2.9.3 1.5-15.7 2.9-.3-1.3 12.8 3.2-.4-.2 2.9zm7.3-7.1l-2.8.3-.3 3.6 3.4-.4-.2 2.7-3.5.4-2.9.3 1.5-15.6 2-.2.9-.1 3.6-.4-.3 2.8-3.6.4-.4 4 2.8-.3-.2 2.5zm7.4-2.3l.4-4.6c0-.2-.1-.4-.3-.4l-1.8.2-.5 5.5 1.8-.2c.2 0 .3-.2.4-.5-.1.1-.1 0 0 0zm3.4-6.4l-.7 7.8c-.1.8-.8 1.5-1.6 1.7l1 4.4-2.9.3-1-4.4-.7.1-.4 4.6-2.9.3L71.4.74l2-.2.9-.1 3.4-.4c.9-.1 1.5.5 1.4 1.5z">
+                </path>
+            </svg>
+            <span>The land of Joy</span>
+        </div>
+        <div class="right">
+            <div class="country">
+                <img
+                     src="https://assets.ducati.com/dist/0.21.0/assets/img/flags/it.png">
+                <span>Italia </span>
+
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15.5L5 8.5L6.41 7.09L12 12.67L17.59 7.09L19 8.5L12 15.5Z"
+                         fill="currentColor" />
+                </svg>
+
+
+            </div>
+            <div class="my-ducati">
+                <span>MY DUCATI
+                </span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15.5L5 8.5L6.41 7.09L12 12.67L17.59 7.09L19 8.5L12 15.5Z"
+                         fill="currentColor" stroke-width="0.5" />
+                </svg>
+                <div class="registeration_panel">
+                    <ul class="panel_links">
+                        <li class="panel_item">
+                            <a href="#">accedi</a>
+                        </li>
+                        <li class="panel_item">
+                            <a href="#">Registrati</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="header">
+        <div class="slides">
+            <div class="slide">
+                <img src="images/bik-1.webp" alt="A red bike">
+                <div class="info p-1">
+                    <h5 class="ebike">Dare to be bold</h5>
+                    <h3 class="heading-3 ">Diavel V4</h3>
+                    <button class="red_button size-2 red_button__position">
+                        scopri di piu
+                    </button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/bicyle.webp" alt="two girls riding on bicyle">
+                <div class="info info_slide-1">
+                    <h5 class="ebike">E-Bike</h5>
+                    <h3 class="heading-3">Nuova Futa All-Road</h3>
+                    <p>Per esaltare le prestazioni anche su strade sterrate.</p>
+                    <button class="red_button size-2 red_button__position">
+                        scopri di piu
+                    </button>
+                </div>
+            </div>
+        </div>
+        <section class="floated-nav modal" id="floatedNav">
+            <nav class="top-nav">
+                <div class="nav-left">
+                    <div class="hamburger">
+                        <input type="checkbox" id="checkbox"
+                             class="openCloseModal">
+                        <label for="checkbox" class="toggle">
+                            <div class="bars" id="bar1"></div>
+                            <div class="bars" id="bar2"></div>
+                            <div class="bars" id="bar3"></div>
+                        </label>
+                    </div>
+                    <ul class="links">
+                        <li class="links_item"><a href="#">Modelli</a></li>
+                        <li class="links_item"><a href="#">Configuratore</a>
+                        </li>
+                        <li class="links_item"><a href="#">Usato</a></li>
+                        <li class="links_item"><a href="#">WDW 2024</a></li>
+                        <li class="links_item"><a href="#">
+                                <img src="https://images.ctfassets.net/x7j9qwvpvr5s/6a1aCcEbeW5UqVEVXOXCad/d976b1d6ea14816ffd3039334f7665ba/ducati_id.png"
+                                     alt="DUCATI" itemprop="logo">
+                            </a></li>
+                    </ul>
+
+                </div>
+                <div class="logo">
+
+                </div>
+                <div class="nav-right">
+                    <ul class="links">
+                        <li class="links_item"><a href="#">Concessionary</a>
+                        </li>
+                        <li class="links_item"><a href="#">Test Ride</a>
+                        </li>
+                        <li class="links_item"><a href="#">Shop</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <nav class="bottom-nav">
+                <ul class="links">
+                    <li class="links_item"><a href="#">Moto </a>
+                        <div class="sub_links">
+                            <!--#<============[Big Screen links]============>#-->
+                            <div class="sub_links_left">
+                                <div class="bike">
+                                    <div class="bike_title">DesertX</div>
+                                    <div class="content">
+                                        <a href="#"
+                                             class="bike_type">DesertX</a>
+                                        <a href="#" class="bike_type">DesertX
+                                            Rally</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Diavel</div>
+                                    <div class="content">
+                                        <a href="#" class="bike_type">Diavel
+                                            V4</a>
+                                        <a href="#" class="bike_type">Diavel for
+                                            bentley</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Monster</div>
+                                    <div class="content">
+                                        <a href="#"
+                                             class="bike_type">Monster</a>
+                                        <a href="#" class="bike_type">Monster
+                                            SP</a>
+                                        <a href="#" class="bike_type">Monster
+                                            30°
+                                            Anniversaria</a>
+                                        <a href="#" class="bike_type">Monster
+                                            Senna
+                                        </a>
+                                        <a href="#" class="bike_type">Configura
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Hypermotard</div>
+                                    <div class="content">
+                                        <a href="#" class="bike_type">950</a>
+                                        <a href="#" class="bike_type">950 SP</a>
+                                        <a href="#" class="bike_type">950
+                                            RVE</a>
+                                        <a href="#" class="bike_type">698
+                                            Mono</a>
+                                        <a href="#" class="bike_type">698 Mono
+                                            RVE</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">PaniGale</div>
+                                    <div class="content">
+                                        <a href="#" class="bike_type">V4 R</a>
+                                        <a href="#" class="bike_type">V2</a>
+                                        <a href="#" class="bike_type">V2
+                                            Bayliss</a>
+                                        <a href="#" class="bike_type">V4</a>
+                                        <a href="#" class="bike_type">V4 SP2 30°
+                                            Anniversaria 916</a>
+                                        <a href="#" class="bike_type">Racing
+                                            Replica
+                                            2023</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                </div>
+
+                                <div class="bike">
+                                    <div class="bike_title">Multistrada</div>
+                                    <div class="content">
+                                        <a href="#" class="bike_type">V2</a>
+                                        <a href="#" class="bike_type">V4</a>
+                                        <a href="#" class="bike_type">V4
+                                            Rally</a>
+                                        <a href="#" class="bike_type">V4 S Grand
+                                            Tour</a>
+                                        <a href="#" class="bike_type">V4 Pikes
+                                            Peak</a>
+                                        <a href="#" class="bike_type">V4 RS</a>
+                                        <a href="#"
+                                             class="bike_type">Configure</a>
+                                    </div>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Streetfighter</div>
+                                    <div class="content">
+                                        <a href="#" class="bike_type">V2</a>
+                                        <a href="#" class="bike_type">V4</a>
+                                        <a href="#" class="bike_type">V4 SP2</a>
+                                        <a href="#" class="bike_type">V4
+                                            Lamborghini</a>
+                                        <a href="#" class="bike_type">V4
+                                            Supreme</a>
+                                        <a href="#"
+                                             class="bike_type">Configure</a>
+                                    </div>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Superleggera</div>
+                                    <div class="content"><a href="#"
+                                             class="bike_type">V4</a></div>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Supersport</div>
+                                    <div class="content">
+                                        <a href="#" class="bike_type">950</a>
+                                        <a href="#"
+                                             class="bike_type">Configure</a>
+                                    </div>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Scrambler</div>
+                                    <div class="content">
+                                        <a href="#" class="bike_type">Icon</a>
+                                        <a href="#" class="bike_type">Full
+                                            Throttle</a>
+                                        <a href="#"
+                                             class="bike_type">Nightshift</a>
+                                        <a href="#" class="bike_type">Tribute
+                                            Pro</a>
+                                        <a href="#" class="bike_type">1100 Sport
+                                            Pro</a>
+                                        <a href="#" class="bike_type">1100 Dark
+                                            Pro</a>
+                                        <a href="#"
+                                             class="bike_type">Configure</a>
+                                    </div>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">E-Bike</div>
+                                    <div class="content">
+                                        <a href="#" class="bike_type">MIG-S</a>
+                                        <a href="#"
+                                             class="bike_type">TK-01RR</a>
+                                        <a href="#" class="bike_type">FUTA</a>
+                                        <a href="#" class="bike_type">Powerstage
+                                            RR</a>
+                                    </div>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Limited Series</div>
+                                    <div class="content">
+                                        <a href="#" class="bike_type">Ducati
+                                            Speciale</a>
+                                        <a href="#" class="bike_type">Ducati
+                                            Unica</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--#<============[small screen links]============>#-->
+                            <div class="sub_links_left" id="sub_links_left">
+                                <div class="left-column">
+                                    <div class="bike_title" id="title-1">DesertX
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-2">Diavel
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-3">Monster
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-4">
+                                        Hypermotard
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-5">
+                                        PaniGale
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-6">
+                                        Multistrada
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-7">
+                                        Streetfighter
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-8">
+                                        Superleggera
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-9">
+                                        Supersport
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-10">
+                                        Scrambler
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-11">E-Bike
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <div class="bike_title" id="title-12">
+                                        Limited Series
+                                        <svg viewBox="0 0 12 22" width="12"
+                                             height="12" id="arrow-small-right"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="right-column">
+                                    <div class="content" id="content-1">
+                                        <a href="#"
+                                             class="bike_type">DesertX</a>
+                                        <a href="#" class="bike_type">DesertX
+                                            Rally</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                    <div class="content" id="content-2">
+                                        <a href="#" class="bike_type">Diavel
+                                            V4</a>
+                                        <a href="#" class="bike_type">Diavel for
+                                            bentley</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                    <div class="content" id="content-3">
+                                        <a href="#"
+                                             class="bike_type">Monster</a>
+                                        <a href="#" class="bike_type">Monster
+                                            SP</a>
+                                        <a href="#" class="bike_type">Monster
+                                            30° Anniversaria</a>
+                                        <a href="#" class="bike_type">Monster
+                                            Senna</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                    <div class="content" id="content-4">
+                                        <a href="#" class="bike_type">950</a>
+                                        <a href="#" class="bike_type">950 SP</a>
+                                        <a href="#" class="bike_type">950
+                                            RVE</a>
+                                        <a href="#" class="bike_type">698
+                                            Mono</a>
+                                        <a href="#" class="bike_type">698 Mono
+                                            RVE</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                    <div class="content" id="content-5">
+                                        <a href="#" class="bike_type">V4 R</a>
+                                        <a href="#" class="bike_type">V2</a>
+                                        <a href="#" class="bike_type">V2
+                                            Bayliss</a>
+                                        <a href="#" class="bike_type">V4</a>
+                                        <a href="#" class="bike_type">V4 SP2 30°
+                                            Anniversaria 916</a>
+                                        <a href="#" class="bike_type">Racing
+                                            Replica 2023</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                    <div class="content" id="content-6">
+                                        <a href="#" class="bike_type">V2</a>
+                                        <a href="#" class="bike_type">V4</a>
+                                        <a href="#" class="bike_type">V4
+                                            Rally</a>
+                                        <a href="#" class="bike_type">V4 S Grand
+                                            Tour</a>
+                                        <a href="#" class="bike_type">V4 Pikes
+                                            Peak</a>
+                                        <a href="#" class="bike_type">V4 RS</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                    <div class="content" id="content-7">
+                                        <a href="#" class="bike_type">V2</a>
+                                        <a href="#" class="bike_type">V4</a>
+                                        <a href="#" class="bike_type">V4 SP2</a>
+                                        <a href="#" class="bike_type">V4
+                                            Lamborghini</a>
+                                        <a href="#" class="bike_type">V4
+                                            Supreme</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                    <div class="content" id="content-8">
+                                        <a href="#" class="bike_type">V4</a>
+                                    </div>
+                                    <div class="content" id="content-9">
+                                        <a href="#" class="bike_type">950</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                    <div class="content" id="content-10">
+                                        <a href="#" class="bike_type">Icon</a>
+                                        <a href="#" class="bike_type">Full
+                                            Throttle</a>
+                                        <a href="#"
+                                             class="bike_type">Nightshift</a>
+                                        <a href="#" class="bike_type">Tribute
+                                            Pro</a>
+                                        <a href="#" class="bike_type">1100 Sport
+                                            Pro</a>
+                                        <a href="#" class="bike_type">1100 Dark
+                                            Pro</a>
+                                        <a href="#"
+                                             class="bike_type">Configura</a>
+                                    </div>
+                                    <div class="content" id="content-11">
+                                        <a href="#" class="bike_type">MIG-S</a>
+                                        <a href="#"
+                                             class="bike_type">TK-01RR</a>
+                                        <a href="#" class="bike_type">FUTA</a>
+                                        <a href="#" class="bike_type">Powerstage
+                                            RR</a>
+                                    </div>
+                                    <div class="content" id="content-12">
+                                        <a href="#" class="bike_type">Ducati
+                                            Speciale</a>
+                                        <a href="#" class="bike_type">Ducati
+                                            Unica</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--#<============[End small screen links]============>#-->
+                            <div class="sub_links_right">
+                                <div class="sub_link_img_container">
+                                    <img src="images/ducati-floated-menu-1.jpg"
+                                         alt="" class="side_link_img">
+                                </div>
+                                <div class="sub_link_content">
+                                    <h2 class="sub_link_title">Moto Usate</h2>
+                                    <p class="sub_link_p">
+
+                                        Ducati Unica è il programma di
+                                        personalizzazione dedicato a chi vuole
+                                        ideare e
+                                        realizzare la propria moto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="links_item"><a href="#">Accessori e
+                            Abbigliamento
+                        </a>
+                        <div class="sub_links">
+                            <div class="sub_links_left">
+                                <div class="bike">
+                                    <div class="bike_title">Accessories</div>
+                                    <a href="#" class="bike_type">Overview</a>
+                                    <a href="#" class="bike_type">Configure your
+                                        bike</a>
+                                    <a href="#" class="bike_type">DesertX</a>
+                                    <a href="#" class="bike_type">Diavel</a>
+                                    <a href="#"
+                                         class="bike_type">Hypermotard</a>
+                                    <a href="#" class="bike_type">Monster</a>
+                                    <a href="#"
+                                         class="bike_type">Streetfighter</a>
+                                    <a href="#"
+                                         class="bike_type">Multistrada</a>
+                                    <a href="#" class="bike_type">Panigale</a>
+                                    <a href="#" class="bike_type">SuperSport</a>
+                                    <a href="#" class="bike_type">Scrambler</a>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Clothing</div>
+                                    <a href="#" class="bike_type">Overview</a>
+                                    <a href="#" class="bike_type">Configure your
+                                        suit</a>
+                                    <a href="#" class="bike_type">Shop
+                                        Online</a>
+                                    <a href="#" class="bike_type">Motorcycle
+                                        Clothing</a>
+                                    <a href="#" class="bike_type">Casual
+                                        Clothing</a>
+                                    <a href="#" class="bike_type">Scrambler</a>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Collaborations</div>
+                                    <a href="#" class="bike_type">Bulgari X
+                                        Ducati</a>
+                                    <a href="#" class="bike_type">Refrigiwear X
+                                        Scrambler</a>
+                                    <a href="#" class="bike_type">Supreme® X
+                                        Ducati</a>
+                                </div>
+
+
+                            </div>
+                            <div class="sub_links_left">
+                            </div>
+                            <div class="sub_links_right">
+                                <div class="sub_link_img_container">
+                                    <img src="images/riders.jpg" alt=""
+                                         class="side_link_img">
+                                </div>
+                                <div class="sub_link_content">
+                                    <h2 class="sub_link_title">Moto Usate</h2>
+                                    <p class="sub_link_p">
+
+                                        Ducati Unica è il programma di
+                                        personalizzazione dedicato a chi vuole
+                                        ideare e
+                                        realizzare la propria moto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="links_item"><a href="#">Ducati World</a>
+                        <div class="sub_links">
+                            <div class="sub_links_left">
+                                <div class="bike">
+                                    <div class="bike_title">Events</div>
+                                    <a href="#" class="bike_type">World Ducati
+                                        Week</a>
+                                    <a href="#" class="bike_type">Ducati World
+                                        Première</a>
+                                    <a href="#" class="bike_type">Ducati
+                                        Tour</a>
+                                    <a href="#" class="bike_type">Multistrada &
+                                        DesertX Experience</a>
+                                    <a href="#" class="bike_type">We Ride As
+                                        One</a>
+                                    <a href="#" class="bike_type">Tribuna Ducati
+                                        Mugello</a>
+                                    <a href="#" class="bike_type">Event
+                                        Calendar</a>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Ducati Academy</div>
+                                    <a href="#" class="bike_type">Overview</a>
+                                    <a href="#" class="bike_type">Rookie
+                                        Academy</a>
+                                    <a href="#" class="bike_type">Road
+                                        Academy</a>
+                                    <a href="#" class="bike_type">Track Warm Up
+                                        Academy</a>
+                                    <a href="#" class="bike_type">Racetrack
+                                        Academy</a>
+                                    <a href="#" class="bike_type">Adventure
+                                        Academy</a>
+                                    <a href="#" class="bike_type">Porsche &
+                                        Ducati
+                                        Experience</a>
+                                    <a href="#" class="bike_type">DRE
+                                        International</a>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Travel with Ducati
+                                    </div>
+                                    <a href="#" class="bike_type">Overview</a>
+                                    <a href="#" class="bike_type">Ducati
+                                        Rent</a>
+                                    <a href="#" class="bike_type">60,000 km
+                                        European
+                                        Tour</a>
+                                    <a href="#" class="bike_type">Scrambler Days
+                                        of
+                                        Joy</a>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">Ducati Stories</div>
+                                    <a href="#" class="bike_type">Overview</a>
+                                    <a href="#" class="bike_type">Travel
+                                        Stories</a>
+                                    <a href="#" class="bike_type">Ducati
+                                        People</a>
+                                    <a href="#" class="bike_type">Redline
+                                        Magazine</a>
+                                </div>
+                                <div class="bike">
+                                    <div class="bike_title">News</div>
+                                    <a href="#" class="bike_type">All News</a>
+                                    <a href="#" class="bike_type">Press Area</a>
+                                </div>
+
+                            </div>
+                            <div class="sub_links_right">
+                                <div class="sub_link_img_container">
+                                    <img src="images/crowd.jpg" alt=""
+                                         class="side_link_img">
+                                </div>
+                                <div class="sub_link_content">
+                                    <h2 class="sub_link_title">Moto Usate</h2>
+                                    <p class="sub_link_p">
+
+                                        Ducati Unica è il programma di
+                                        personalizzazione dedicato a chi vuole
+                                        ideare e
+                                        realizzare la propria moto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="links_item"><a href="#">Racing</a>
+                        <div class="sub_links">
+                            <div class="sub_links_left">
+                                <div class="bike">
+                                    <div class="bike_title">MOTOGP</div>
+                                    <a href="#" class="bike_type">Home</a>
+                                    <a href="#" class="bike_type">News</a>
+                                    <a href="#" class="bike_type">Team</a>
+                                    <a href="#" class="bike_type">Desmosedici
+                                        GP</a>
+                                    <a href="#" class="bike_type">Calendar</a>
+                                    <a href="#" class="bike_type">Results &
+                                        Standings</a>
+                                    <a href="#" class="bike_type">Partners &
+                                        Sponsors</a>
+                                    <a href="#" class="bike_type">Tribuna Ducati
+                                        2024</a>
+                                </div>
+
+                                <div class="bike">
+                                    <div class="bike_title">SUPERBIKE</div>
+                                    <a href="#" class="bike_type">Home</a>
+                                    <a href="#" class="bike_type">News</a>
+                                    <a href="#" class="bike_type">Team</a>
+                                    <a href="#" class="bike_type">Panigale V4
+                                        R</a>
+                                    <a href="#" class="bike_type">Calendar</a>
+                                    <a href="#" class="bike_type">Results &
+                                        Standings</a>
+                                    <a href="#"
+                                         class="bike_type">Arubaracing.it</a>
+                                </div>
+
+                                <div class="bike">
+                                    <div class="bike_title">OFF-ROAD</div>
+                                    <a href="#" class="bike_type">Home</a>
+                                    <a href="#" class="bike_type">News</a>
+                                    <a href="#" class="bike_type">Desmo450
+                                        MX</a>
+                                    <a href="#" class="bike_type">Calendar</a>
+                                    <a href="#" class="bike_type">Partners &
+                                        Sponsors</a>
+                                </div>
+
+                                <div class="bike">
+                                    <div class="bike_title">MOTOE</div>
+                                    <a href="#" class="bike_type">Home</a>
+                                </div>
+                            </div>
+                            <div class="sub_links_right">
+                                <div class="sub_link_img_container">
+                                    <img src="images/bike-floated-menu.jpg"
+                                         alt="" class="side_link_img">
+                                </div>
+                                <div class="sub_link_content">
+                                    <h2 class="sub_link_title">Moto Usate</h2>
+                                    <p class="sub_link_p">
+
+                                        Ducati Unica è il programma di
+                                        personalizzazione dedicato a chi vuole
+                                        ideare e
+                                        realizzare la propria moto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="links_item"><a href="#">Servizi e
+                            Manutenzione</a>
+                        <div class="sub_links">
+                            <div class="sub_links_left">
+                                <div class="bike">
+                                    <div class="bike_title">SERVICES</div>
+                                    <a href="#" class="bike_type">Contact Us</a>
+                                    <a href="#" class="bike_type">Warranty</a>
+                                    <a href="#" class="bike_type">Warranty
+                                        Extension</a>
+                                    <a href="#" class="bike_type">Roadside
+                                        Assistance</a>
+                                    <a href="#" class="bike_type">RC
+                                        Insurance</a>
+                                    <a href="#" class="bike_type">Ducati
+                                        Rent</a>
+                                </div>
+
+                                <div class="bike">
+                                    <div class="bike_title">MAINTENANCE</div>
+                                    <a href="#" class="bike_type">Overview</a>
+                                    <a href="#" class="bike_type">Transparent
+                                        Maintenance</a>
+                                    <a href="#" class="bike_type">Original Spare
+                                        Parts</a>
+                                    <a href="#" class="bike_type">Owner's
+                                        Manuals</a>
+                                    <a href="#" class="bike_type">Safety
+                                        Campaigns
+                                        and Updates</a>
+                                    <a href="#" class="bike_type">RMI - Repair &
+                                        Maintenance Information</a>
+                                    <a href="#" class="bike_type">Ducati
+                                        Lubricants</a>
+                                </div>
+
+                                <div class="bike">
+                                    <div class="bike_title">DUCATI NETWORK</div>
+                                    <a href="#" class="bike_type">Dealer
+                                        Network</a>
+                                    <a href="#" class="bike_type">Find a
+                                        Dealer</a>
+                                    <a href="#" class="bike_type">Used</a>
+                                    <a href="#" class="bike_type">Ducati
+                                        Approved -
+                                        Certified Used</a>
+                                    <a href="#" class="bike_type">Become a
+                                        Ducati
+                                        Dealer</a>
+                                </div>
+
+                                <div class="bike">
+                                    <div class="bike_title">CONNECTIVITY</div>
+                                    <a href="#" class="bike_type">MyDucati
+                                        App</a>
+                                    <a href="#" class="bike_type">Ducati Link
+                                        App</a>
+                                    <a href="#" class="bike_type">Multistrada V4
+                                        Video Tutorials</a>
+                                    <a href="#" class="bike_type">Turn By Turn
+                                        Navigation</a>
+                                    <a href="#" class="bike_type">Connectivity -
+                                        FAQ</a>
+                                </div>
+
+                                <div class="bike">
+                                    <div class="bike_title">FINANCIAL SERVICES
+                                    </div>
+                                    <a href="#" class="bike_type">Financial
+                                        Services</a>
+                                    <a href="#" class="bike_type">Ducati
+                                        Insurance</a>
+                                    <a href="#" class="bike_type">Ducati Ride
+                                        Time</a>
+                                </div>
+                            </div>
+                            <div class="sub_links_right">
+                                <div class="sub_link_img_container">
+                                    <img src="images/Moto-Speciali-slider-menu-330x280.png"
+                                         alt="" class="side_link_img">
+                                </div>
+                                <div class="sub_link_content">
+                                    <h2 class="sub_link_title">Moto Usate</h2>
+                                    <p class="sub_link_p">
+
+                                        Ducati Unica è il programma di
+                                        personalizzazione dedicato a chi vuole
+                                        ideare e
+                                        realizzare la propria moto.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- <div class="svg-pointer">
+
+        </div> -->
+    </header>
+    <section class="showcase">
+        <div class="container-btn"><button class="black-round-btn">La GAMA
+                Ducati</button></div>
+        <div class="cards">
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/MY23-Diavel-V4-Rd-Model-Blocks-630x390.png"
+                         alt="Image" class="card-image">
+                    <img src="images/MY24-Diavel-V4-Model-Blocks-3-4-630x390.png"
+                         alt="Hover Image" class="hover-image">
+                </div>
+                <div class="card-content">
+                    <span class="name">Diavel V4</span>
+                    <button class="circular-button">
+                        +
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/MY-22-DesertX-Model-Blocks-630x390.png"
+                         alt="Image" class="card-image">
+                    <img src="images/MY24-DesertX-Model-Blocks-3-4-630x390.png"
+                         alt="Hover Image" class="hover-image">
+                </div>
+                <div class="card-content">
+                    <span class="name">DesertX</span>
+                    <button class="circular-button">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="images/MY23-Streetfighter-V4S-Gr-Model-Blocks-630x390.png"
+                         alt="Image" class="card-image">
+                    <img src="images/MY24-Streetfighter-V4-S-Model-Blocks-3-4-630x390.png"
+                         alt="Hover Image" class="hover-image">
+                </div>
+                <div class="card-content">
+                    <span class="name">Streetfighter V4</span>
+                    <button class="circular-button">+</button>
+                </div>
+            </div>
+
+            <div class="card">
+
+                <span class="new-btn">New</span>
+                <div class="image-container">
+                    <img src="images/MY23-Multistrada-V4-S-Grand-Tour-Model-Blocks-630x390.png"
+                         alt="Image" class="card-image">
+                    <img src="images/MY24-Multistrada-V4-S-Grand-Tour-Model-Blocks-3-4-630x390.png"
+                         alt="Hover Image" class="hover-image">
+                </div>
+                <div class="card-content">
+                    <span class="name">Multistrada V4 S Grand Tour</span>
+                    <button class="circular-button">+</button>
+                </div>
+            </div>
+
+            <div class="card">
+
+
+                <div class="image-container">
+                    <img src="images/MY23-SCR-Icon-Y-Model-Blocks-02-630x390.png"
+                         alt="Image" class="card-image">
+                    <img src="images/MY24-Scrambler-Icon-Model-Blocks-3-4-630x390.png"
+                         alt="Hover Image" class="hover-image">
+                </div>
+                <div class="card-content">
+                    <span class="name">Scrambler Icon</span>
+                    <button class="circular-button">+</button>
+                </div>
+            </div>
+
+            <div class="card">
+
+                <span class="new-btn">New</span>
+                <div class="image-container">
+                    <img src="images/MY-22-Monster-937-Rd-Model-Blocks-630x390-v06.png"
+                         alt="Image" class="card-image">
+                    <img src="images/MY24-Monster-Rd-Model-Blocks-3-4-630x390.png"
+                         alt="Hover Image" class="hover-image">
+                </div>
+                <div class="card-content">
+                    <span class="name">Monster</span>
+                    <button class="circular-button">+</button>
+                </div>
+            </div>
+            <div class="card">
+
+
+                <div class="image-container">
+                    <img src="images/MY23-Multistrada-V4-Rally-Radar-Gr-Model-Blocks-630x390.png"
+                         alt="Image" class="card-image">
+                    <img src="images/MY24-Multistrada-V4-Rally-Model-Blocks-3-4-630x390.png"
+                         alt="Hover Image" class="hover-image">
+                </div>
+                <div class="card-content">
+                    <span class="name">Multistrada V4 Rally</span>
+                    <button class="circular-button">+</button>
+                </div>
+            </div>
+            <div class="card">
+
+                <span class="new-btn">New</span>
+                <div class="image-container">
+                    <img src="images/MY24-Futa-All-Road-Model-Blocks-630x390.png"
+                         alt="Image" class="card-image">
+                    <img src="images/MY24-Futa-All-Road-Model-Blocks-3-4-630x390.png"
+                         alt="Hover Image" class="hover-image">
+                </div>
+                <div class="card-content">
+                    <span class="name">Futa All-Road</span>
+                    <button class="circular-button">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="shop-card hidden">
+        <div class="arrows">
+            <svg viewBox="0 0 12 22" id="arrow-small-left"
+                 class="arrow-small-left" xmlns="http://www.w3.org/2000/svg">
+                <path
+                     d="M10 21.2c-.3 0-.7-.1-.9-.4l-8-9c-.4-.5-.4-1.2 0-1.7l8-9c.5-.5 1.3-.6 1.8-.1s.6 1.2.1 1.8L3.7 11l7.3 8.2c.5.5.4 1.3-.1 1.8-.3.1-.6.2-.9.2z">
+                </path>
+            </svg>
+            <svg viewBox="0 0 12 22" id="arrow-small-right"
+                 class="arrow-small-right" xmlns="http://www.w3.org/2000/svg">
+                <path
+                     d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                </path>
+            </svg>
+        </div>
+        <svg class="icon icon--modal-close icon-1" viewBox="0 0 36 36">
+            <use xlink:href="#modal-close"></use>
+            <path
+                 d="M18 21.2c-.3 0-.7-.1-.9-.4L10 12.9l-7.1 7.9c-.5.5-1.2.6-1.8.1-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l7 7.9 7.1-7.9c.5-.5 1.3-.6 1.8-.1s.6 1.2.1 1.8L11.7 11l7.3 8.2c.5.5.4 1.3-.1 1.8-.3.1-.6.2-.9.2z">
+            </path>
+        </svg>
+
+        <div class="shop-image-container">
+            <div class="terms_box">
+                <div class="term">
+                    <span class="term_value">168 CV</span>
+                    <span class="term_label">Potenza</span>
+                </div>
+                <div class="term">
+                    <span class="term_value">12,8 kgm</span>
+                    <span class="term_label">coppia</span>
+                </div>
+                <div class="term">
+                    <span class="term_value">223 kg</span>
+                    <span class="term_label">peso in ordine <br>di marcia
+                        senza carburante
+                    </span>
+                </div>
+            </div>
+            <img src="images/shop-card-image.jpg" class="shop_image">
+        </div>
+        <div class="shop_content">
+            <h2 class="title">
+                Diavel V4
+            </h2>
+            <p class="description-inner">
+                Dare to be bold
+            </p>
+            <div class="price-wrapper">
+                <p class="price">A partire da 26.890€</p>
+                <a href="#price-info" class="info_cirle">i</a>
+            </div>
+
+            <div class="buttons">
+                <button class="white-button size-1">
+                    configura ora
+                </button>
+                <button class="red_button size-1">scorpi de piu</button>
+            </div>
+        </div>
+    </div>
+    <section class="testimonials">
+        <h1 class="heading-gray">Contenuti in evidenza</h1>
+        <div class="testimonial-container">
+            <!--#<============[Testimonial 1]============>#-->
+            <div class="testimonial" id="testimonial-1">
+                <div class="dots">
+                    <div class="dot dot-filled"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="testimonial-wrapper testimonial-animation"
+                     id="wrapper-1">
+                    <div class="left-t">
+                        <div class="catagory">Motogp</div>
+                        <h2 class="title">#DucatiCorreInAzzurro il Gran
+                            Premio
+                            d’Italia Brembo al Mugello</h2>
+                        <p class="description">Domenica 2 giugno, in
+                            occasione
+                            del
+                            Gran Premio d’Italia Brembo di MotoGP, il
+                            Ducati Lenovo Team correrà in Azzurro: il colore
+                            delle
+                            Nazionali Italiane nello
+                            sport.
+                            Caduta per Bastianini al terzo giro
+                            dopo un contatto con un rivale.</p>
+                        <span class="name-driver">
+                            leggi di più
+                        </span>
+                    </div>
+                    <div class="right-t">
+                        <img src="images/2024-05-27-Ducati-Azzurro-banner-wide-663x249.jpg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="testimonial-wrapper hidden testimonial-animation"
+                     id="wrapper-2">
+                    <div class="left-t">
+                        <div class="catagory">World Ducati week 2024</div>
+                        <h2 class="title">La festa di tutti i Ducatisti e
+                            appassionati motociclisti sta per tornare!</h2>
+                        <p class="description">Il più grande raduno di
+                            Ducatisti
+                            e
+                            appassionati motociclisti è pronto per
+                            lasciare il segno nel 2024. L'appuntamento è dal
+                            26
+                            al
+                            28 luglio.</p>
+                        <span class="name-driver">
+                            Scorpi di più
+                        </span>
+                    </div>
+                    <div class="right-t">
+                        <img src="images/slide-bike.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!--#<============[Testimonial 2]============>#-->
+            <div class="testimonial">
+
+                <div class="testimonial-wrapper">
+                    <div class="left-t">
+                        <div class="catagory">World Ducati week 2024</div>
+                        <h2 class="title">La festa di tutti i Ducatisti e
+                            appassionati motociclisti sta per tornare!</h2>
+                        <p class="description">Il più grande raduno di
+                            Ducatisti
+                            e
+                            appassionati motociclisti è pronto per
+                            lasciare il segno nel 2024. L'appuntamento è dal
+                            26
+                            al
+                            28 luglio.</p>
+                        <span class="name-driver">
+                            Scorpi di più
+                        </span>
+                    </div>
+                    <div class="right-t">
+                        <img src="images/WDW_2024_Rider_website_banner_wide_663x249.jpg"
+                             alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="image-container">
+            <img src="images/DRE-Looks-preview-802x561.jpg" alt="">
+            <div class="overlay">
+                <div class="center-container">
+                    <div class="preview-catagory">DRE</div>
+                    <div class="preview-title">Riding Academy</div>
+                    <button class="grey-border-btn">
+                        scopri di più
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/Ducati-Corse-looks-preview-1000x700.jpg" alt="">
+            <div class="overlay">
+                <div class="center-container">
+                    <div class="preview-catagory">Racing</div>
+                    <div class="preview-title">Il mondo MotoGP, Superbike e
+                        Off-Road</div>
+                    <div class="btn-div">
+                        <button class="grey-border-btn">
+                            scopri di più
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/Ducati-Homepage-Ducati-Heritage-looks_-preview-1000x700.png"
+                 alt="">
+            <div class="overlay">
+                <div class="center-container">
+                    <div class="preview-catagory">Heritage</div>
+                    <div class="preview-title">la storia ducati</div>
+                    <button class="grey-border-btn">
+                        via heritage
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="images/V21L-Looks-preview-1000x700.jpg" alt="">
+            <div class="overlay">
+                <div class="center-container">
+                    <div class="preview-catagory">innovation</div>
+                    <div class="preview-title">Innovazione tecnologica</div>
+                    <div class="btn-div">
+                        <button class="grey-border-btn">
+                            vai a innovation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-cards">
+        <h1 class="heading-gray">Le ultime news</h1>
+        <div class="bike-cards">
+            <div class="bike-card">
+                <div class="bike-img-container">
+                    <img src="images/card-1.jpg" alt="">
+                </div>
+                <div class="bike-content">
+                    <a href="#" class="bike-title">
+                        Scrambler
+                    </a>
+                    <p class="bike-description">
+                        Scrambler® stupisce con due concept al Bike Shed
+                        Show di
+                        Londra
+                    </p>
+                </div>
+            </div>
+            <div class="bike-card">
+                <div class="bike-img-container">
+                    <img src="images/card-2.jpg" alt="">
+                </div>
+                <div class="bike-content">
+                    <a href="#" class="bike-title">
+                        Diavel
+                    </a>
+                    <p class="bike-description">
+                        Ducati si aggiudica il prestigioso premio “Best of
+                        the
+                        Best” del Red Dot Award
+                        con il Diavel V4
+                    </p>
+
+                </div>
+            </div>
+            <div class="bike-card">
+                <div class="bike-img-container">
+                    <img src="images/card-3.jpg" alt="">
+                </div>
+                <div class="bike-content">
+                    <a href="#" class="bike-title">
+                        Corporate
+                    </a>
+                    <p class="bike-description">
+                        Inaugurato il nuovo polo logistico Ducati nel G-Park
+                        di
+                        GLP a Valsamoggia
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="ducati">
+        <h1 class="heading-gray">Enjoy Ducati to the fullest</h1>
+        <div class="ducati">
+            <div class="ducati-img-container">
+                <img src="images/ducati-1.webp" alt="">
+                <div class="ducati-overlay">
+                    <span>Configuratore Ducati</span>
+                </div>
+            </div>
+            <div class="ducati-img-container">
+                <img src="images/ducati-2.webp" alt="">
+                <div class="ducati-overlay">
+                    <span>Configuratore Scrambler</span>
+                </div>
+            </div>
+            <div class="ducati-img-container">
+                <img src="images/ducati-3.webp" alt="">
+                <div class="ducati-overlay">
+                    <span>Ducati Shop</span>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <section id="contact-us">
+        <form action="#" class="form">
+            <div class="nl-title">
+                Iscriviti alla newsletter
+            </div>
+            <p>Leggil'<a href="#">informativa privacy</a> per info sul
+                trattamento dati</p>
+            <p>Rimani aggiornato sulle novità e le promozioni Ducati</p>
+            <div class="inputs">
+                <input type="email" placeholder="LA TUA EMAIL">
+                <button class="form-btn"">Iscriviti</button>
+            </div>
+            <div class=" recaptcha">
+                    This site is protected by reCAPTCHA and the Google <a
+                         href="">
+                        Privacy
+                        Policy
+                    </a> and Terms of
+                    <a href="">Service</a> apply.
+            </div>
+        </form>
+    </section>
+    <section id="footer">
+        <div class="footer">
+            <div class="footer_logo">
+                <img src="images/ducati-logo-footer.svg" alt="">
+            </div>
+            <ul class="footer_links">
+                <li class="footer_item"><a href="#" class="footer_link">TERMINI
+                        UTILIZZO</a>
+                </li>
+                <li class="footer_item"><a href="#"
+                         class="footer_link">INFORMATIVA PRIVACY</a>
+                </li>
+                <li class="footer_item"><a href="#"
+                         class="footer_link">INFORMATIVA COOKIE</a>
+                </li>
+            </ul>
+            <p class="footer_copyright">Copyright © 2024 Ducati Motor
+                Holding
+                S.p.A.
+                - Società a Socio Unico - Società
+                soggetta all’attività di Direzione e Coordinamento di AUDI
+                AG.
+                Tutti i diritti
+                riservati. P. IVA 05113870967</p>
+            <div class="footer_logos">
+                <div class="wrap">
+                    <div class="lgo">
+                        <img src="images/scrambler logo.svg" class="lgo-img"
+                             alt="">
+                        <span>The land of Joy</span>
+                    </div>
+                    <div class="lgo">
+                        <img src="images/s-logo.svg" alt="" class="lgo-img">
+                        <span>Configuratore Scrambler</span>
+                    </div>
+                </div>
+                <div class="wrap-icons">
+                    <ul class="footer_icons">
+                        <li><a href="#"><img src="images/insta.svg" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="images/facebook.svg"
+                                     alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="images/youtub.svg" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="images/tiktok.svg" alt=""></a>
+                        </li>
+                        <li><a href="#"><img src="images/twitter-icon.svg"
+                                     alt=""></a></li>
+                        <li><a href="#"><img src="images/threads-icon.svg"
+                                     alt=""></a></li>
+                        <li><a href="#"><img src="images/linkedin-icon.svg"
+                                     alt=""></a></li>
+                    </ul>
+                    <div class="footer_country">
+                        <img src="https://assets.ducati.com/dist/0.21.0/assets/img/flags/it.png"
+                             class="flag">
+                        <span class="italia">Italia </span>
+                        <svg viewBox="0 0 12 22" id="arrow-small-right"
+                             class="arrow-icon"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                 d="M2 21.2c-.3 0-.6-.1-.8-.3-.5-.5-.6-1.2-.1-1.8L8.3 11 1.1 2.8c-.5-.5-.4-1.3.1-1.7.5-.5 1.3-.4 1.8.1l8 9c.4.5.4 1.2 0 1.7l-8 9c-.3.2-.7.3-1 .3z">
+                            </path>
+                        </svg>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src=" script.js"></script>
+    <script src="floated_div.js"></script>
+</body>
+</html>

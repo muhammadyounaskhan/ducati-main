@@ -1,0 +1,485 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.header {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.slides {
+  display: flex;
+  height: 100%;
+  // width: 200%;
+  /* Two slides, each taking 100% of the viewport width */
+}
+.slide {
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.nav {
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  height: 85px;
+  color: #fafafa;
+  position: absolute;
+  left: 50%;
+  z-index: 100;
+  transform: translateX(-50%);
+  @media screen and (max-width: 980px) {
+    display: none;
+  }
+}
+.left {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
+
+  svg {
+    width: 90px;
+    fill: #fdfdfd;
+  }
+  span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+.right {
+  display: flex;
+  align-items: center;
+  .country {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    border-right: 1px solid #fafafa;
+    padding-right: 2rem;
+  }
+  span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .my-ducati {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    padding-left: 2rem;
+    cursor: pointer;
+  }
+  svg {
+    width: 20px;
+  }
+}
+.info {
+  position: absolute;
+  z-index: 500;
+  top: 210px;
+  left: 0;
+  color: #fafafa;
+  width: 100%;
+  height: 200px;
+  padding: 2rem;
+  .ebike {
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 0.8rem;
+  }
+  .heading-3 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 1.4rem;
+  }
+  &_slide-1 {
+    @media screen and (max-width: 600px) {
+      p {
+        display: none;
+      }
+    }
+  }
+}
+
+/*
+#<=====================================================>
+#                 Floated Navigation
+#<=====================================================>
+*/
+.floated-nav {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  width: 95.5%;
+  box-shadow: $box-shadow-up, $box-shadow-down;
+  background-color: #fafafa;
+  height: 6.5rem;
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 1.5rem;
+  @media screen and (max-width: 980px) {
+    top: 20px;
+  }
+  z-index: 10;
+}
+.bottom-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  position: absolute;
+  display: none;
+  top: 6.5rem;
+  left: 50%;
+  height: 0;
+  transition: all 0.2s;
+  padding: 0 3.5rem;
+  background-color: #fafafa;
+  z-index: 5001;
+  width: 100%;
+  transform: translateX(-50%);
+  border-top: 1px solid #ddd;
+  // @media screen and (max-width: 980px) {
+  //   top: 6.5rem;
+  // }
+}
+.height {
+  height: 6.5rem;
+  display: block;
+}
+.display {
+  display: none;
+}
+.top-nav {
+  width: 100%;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.nav-left {
+  display: flex;
+  column-gap: 2rem;
+}
+.top-nav,
+.nav-left,
+.links {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.nav_left {
+  column-gap: 2rem;
+}
+.bottom-nav {
+  .links {
+    display: flex;
+    column-gap: 2rem;
+    list-style: none;
+    a {
+      color: $primary-black;
+      text-transform: uppercase;
+    }
+    // @media screen and (max-width: 850px) {
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    //   row-gap: 2rem;
+    //   padding: 2rem 0.5rem;
+    // }
+    .links_item {
+      padding: 3rem 0;
+    }
+  }
+}
+.top-nav {
+  .links {
+    column-gap: 2.5rem;
+
+    &_item {
+      &:not(:last-child) {
+        @media screen and (max-width: 800px) {
+          display: none;
+        }
+      }
+      list-style: none;
+
+      a {
+        color: #000;
+        text-transform: uppercase;
+      }
+    }
+    img {
+      width: 55px;
+      margin-left: 2rem;
+    }
+  }
+}
+
+.top-nav {
+  @media screen and (max-width: 1050px) {
+    .links {
+      &_item:first-child {
+        display: none;
+      }
+      justify-content: space-between;
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .nav-left {
+    column-gap: 30vw;
+  }
+}
+.top-nav {
+  @media screen and (max-width: 700px) {
+    .nav-left {
+      .links {
+        &_item:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+/*
+#<=====================================================>
+#                 LAST MENU
+#<=====================================================>
+*/
+
+.links_item:hover .sub_links {
+  display: block;
+  display: flex;
+  justify-content: start;
+  background-color: #fafafa;
+  width: 100%;
+  border-top: 1px solid #ddd;
+}
+.sub_links {
+  position: absolute;
+  top: calc(6.5rem - 1px);
+  left: 0;
+  display: none;
+  transition: all 0.2s;
+  height: 50vh;
+  overflow: auto;
+
+  .sub_links_left {
+    padding-bottom: 2rem;
+    flex: 1 1 500px;
+    width: 75%;
+    padding: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+  .sub_links_left:last-child {
+    display: none;
+  }
+  .sub_links_right {
+    flex: 0 0 300px;
+    width: 25%;
+  }
+  .side_link_img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .sub_link_content {
+    width: 100%;
+    padding: 2rem;
+    min-height: 200px;
+    background-color: #ebebeb;
+  }
+  .sub_link_title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: grey;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+  }
+  .sub_link_p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  /*#<============[bikes]============>#*/
+  .bike {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8rem;
+    min-width: auto;
+    padding-bottom: 2rem;
+  }
+
+  .bike_title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: grey;
+    text-transform: uppercase;
+  }
+  .bike_type {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: $primary-black;
+    text-transform: capitalize;
+    min-width: 100px;
+  }
+}
+#sub_links_left {
+  display: none;
+}
+/*#<============[LINKS FOR SMALLER SCREEN]============>#*/
+@media screen and (max-width: 990px) {
+  .sub_links_left:first-child {
+    display: none;
+  }
+  #sub_links_left {
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1rem;
+    .left-column {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      padding-bottom: 2rem;
+      .bike_title {
+        cursor: pointer;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        svg {
+          justify-self: end;
+        }
+      }
+    }
+
+    .right-column {
+      .content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        border-left: 1px solid #dddd;
+        padding: 0 1rem 1rem 1rem;
+        margin-bottom: 1rem;
+      }
+      .content:not(:first-child) {
+        display: none;
+      }
+    }
+    .right-icon {
+      width: 10px;
+      color: red;
+      justify-self: end;
+    }
+  }
+}
+// @media screen and (max-width: 990px) {
+//   #title-1:hover ~ .right-column #content-1,
+//   #title-2:hover ~ .right-column #content-2,
+//   #title-3:hover ~ .right-column #content-3,
+//   #title-4:hover ~ .right-column #content-4,
+//   #title-5:hover ~ .right-column #content-5,
+//   #title-6:hover ~ .right-column #content-6,
+//   #title-7:hover ~ .right-column #content-7,
+//   #title-8:hover ~ .right-column #content-8,
+//   #title-9:hover ~ .right-column #content-9,
+//   #title-10:hover ~ .right-column #content-10,
+//   #title-11:hover ~ .right-column #content-11,
+//   #title-12:hover ~ .right-column #content-12 {
+//     display: block;
+//   }
+// }
+/*
+#<=====================================================>
+#                 Overlay body
+#<=====================================================>
+*/
+body {
+  position: relative;
+}
+.overlay-body {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  display: none;
+}
+
+.height-2 {
+  height: 26rem;
+}
+
+.show {
+  display: block !important;
+}
+/*#<============[Panel]============>#*/
+.z-index {
+  z-index: 20;
+}
+.registeration_panel {
+  position: absolute;
+  top: 150%;
+  left: -30%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 400;
+  display: none;
+  background-color: #fdfdfd;
+  width: 200px;
+  height: auto;
+  padding: 1rem;
+  &::before {
+    content: "";
+    content: "";
+    position: absolute;
+    top: -19px;
+    right: 27%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    z-index: 400;
+    border-color: transparent transparent #fdfdfd transparent;
+  }
+  .panel_item {
+    list-style: none;
+    margin-bottom: 1rem;
+    a {
+      color: $primary-black;
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+}

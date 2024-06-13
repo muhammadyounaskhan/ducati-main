@@ -1,0 +1,40 @@
+#ducati {
+  margin-bottom: 4rem;
+}
+.ducati {
+  display: flex;
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+  }
+  .ducati-img-container {
+    position: relative;
+    img {
+      @media screen and (max-width: 950px) {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+
+  .ducati-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+    cursor: pointer;
+    transition: all 0.5s;
+    span {
+      display: block;
+      font-size: 1.4rem;
+      color: $light-grey;
+    }
+    &:hover {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+    }
+  }
+}

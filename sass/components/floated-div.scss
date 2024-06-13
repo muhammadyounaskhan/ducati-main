@@ -1,0 +1,16 @@
+#viewportWidth {
+  width: max-content;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  background-color: #dbd;
+  color: rgb(115, 49, 115);
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 4000;
+}

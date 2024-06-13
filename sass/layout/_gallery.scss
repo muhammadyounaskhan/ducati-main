@@ -1,0 +1,53 @@
+.gallery {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  .image-container {
+    flex: 1 1 50%;
+    height: 100%;
+    min-width: 400px;
+    position: relative;
+  }
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .overlay {
+    transition: all 0.5s;
+    position: absolute;
+    top: 47%;
+    left: 0;
+    color: $primary-white;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.01),
+      rgba(0, 0, 0, 0.3)
+    );
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .preview-catagory {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  .preview-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 1.4rem;
+  }
+}
+.image-container:hover .overlay {
+  color: $light-grey;
+  top: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}
