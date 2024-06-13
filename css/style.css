@@ -568,6 +568,10 @@ img {
     top: 20px;
   }
 }
+.floated-nav a {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
 
 .bottom-nav {
   display: flex;
@@ -813,12 +817,13 @@ img {
   .sub_links .sub_links_left .bike .bike_title:hover {
     color: #0f0f0f;
   }
-  .sub_links .sub_links_left .bike .bike_title:hover + .content {
+  .sub_links .sub_links_left .bike:hover .content {
     display: flex;
     flex-direction: column;
     row-gap: 0.8rem;
+    cursor: pointer;
   }
-  .sub_links .sub_links_left .bike .bike_title:hover svg {
+  .sub_links .sub_links_left .bike .bike:hover svg {
     fill: #0f0f0f;
   }
 }

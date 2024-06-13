@@ -148,6 +148,10 @@ img {
     top: 20px;
   }
   z-index: 10;
+  a {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
 }
 .bottom-nav {
   display: flex;
@@ -413,12 +417,13 @@ img {
       .bike_title:hover {
         color: $primary-black;
       }
-      .bike_title:hover + .content {
+      &:hover .content {
         display: flex;
         flex-direction: column;
         row-gap: 0.8rem;
+        cursor: pointer;
       }
-      .bike_title:hover svg {
+      .bike:hover svg {
         fill: $primary-black;
       }
     }
