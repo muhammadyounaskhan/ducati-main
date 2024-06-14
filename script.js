@@ -253,13 +253,16 @@ const rightNav = document.querySelector('.nav-right');
 checkbox.addEventListener('click', () => {
     const viewportWidth = window.innerWidth;
 
-    if (viewportWidth < 850 && checkbox.checked) {
+    if (viewportWidth <= 850 && checkbox.checked) {
         navRightElementChild.style.display = 'none';
         logo.style.display = 'none';
         modelli.firstChild.style.color = "#cc0000";
         rightNav.appendChild(right);
     } else {
-        // navRightElementChild.style.display = 'inline-block';
+        if (viewportWidth <= 850) {
+
+            navRightElementChild.style.display = 'inline-block';
+        }
         logo.style.display = 'block';
         nav.appendChild(right);
 
