@@ -29,7 +29,7 @@ const checkbox = document.getElementById('checkbox');
 const bottomNav = document.querySelector('.bottom-nav');
 const floatedNav = document.getElementById('floatedNav');
 const overlay = document.getElementById('overlay-body');
-
+const links = document.querySelectorAll('.top-nav a');
 const windowWidth = window.innerWidth;
 checkbox.addEventListener('change', () => {
     if (bottomNav) {
@@ -37,6 +37,17 @@ checkbox.addEventListener('change', () => {
         bottomNav.classList.toggle('height');
         /*#<============[Overlay Activation Code]============>#*/
         overlay.classList.toggle('show');
+        if (checkbox.checked) {
+
+            links.forEach((link) => {
+                link.style.color = "#ddd";
+            })
+        } else {
+            links.forEach((link) => {
+                link.style.color = "#000";
+            })
+
+        }
     }
 });
 overlay.addEventListener('click', () => {
@@ -124,12 +135,6 @@ Array.from(circularButtons).forEach(button => {
 #<=====================================================>
 */
 
-// const modelli = document.querySelector('.modelli');
-// const navLeft = document.querySelector('.nav-left .links');
-// const navRight = document.querySelector('.nav-right .links');
-// if (modelli) {
-//     navRight.appendChild(modelli);
-// }
 const modelli = document.querySelector('.modelli');
 function moveLink() {
     const navLeft = document.querySelector('.nav-left .links');
@@ -137,7 +142,7 @@ function moveLink() {
 
 
     if (window.innerWidth <= 850) {
-        // Move link to nav-right if viewport width is 800px or less
+        // Move link to nav-right if viewport width is 850px or less
         if (navLeft.contains(modelli)) {
             navRight.appendChild(modelli);
             modelli.style.display = 'block';
@@ -145,7 +150,7 @@ function moveLink() {
             arrow.style.display = 'none';
         }
     } else if (window.innerWidth > 850) {
-        // Move link back to nav-left if viewport width is more than 800px
+        // Move link back to nav-left if viewport width is more than 850px
         if (navRight.contains(modelli)) {
             navLeft.insertBefore(modelli, navLeft.firstChild);
             modelli.firstChild.style.color = "#000";
@@ -172,4 +177,21 @@ modelli.addEventListener('click', () => {
     arrow.classList.toggle('arrow-down');
     modelliShowbox.classList.toggle('hidden');
     overlay.classList.toggle('show');
+});
+
+/*
+#<=====================================================>
+#                 LINKS FADING WHEN CLICKING MODELLI
+#<=====================================================>
+*/
+document.querySelector('.modelli').addEventListener('click', function () {
+    const topNavLinks = document.querySelectorAll('.top-nav a:not(.modelli a)');
+    const hamburger = document.querySelector('.hamburger');
+    hamburger.classList.toggle('faded');
+    hamburger.classList.toggle('uninteractive');
+    topNavLinks.forEach(link => {
+        link.classList.toggle('faded');
+
+
+    });
 });
