@@ -130,10 +130,10 @@ Array.from(circularButtons).forEach(button => {
 // if (modelli) {
 //     navRight.appendChild(modelli);
 // }
+const modelli = document.querySelector('.modelli');
 function moveLink() {
     const navLeft = document.querySelector('.nav-left .links');
     const navRight = document.querySelector('.nav-right .links');
-    const modelli = document.querySelector('.modelli');
 
 
     if (window.innerWidth <= 850) {
@@ -142,12 +142,14 @@ function moveLink() {
             navRight.appendChild(modelli);
             modelli.style.display = 'block';
             modelli.firstChild.style.color = "#CB1517";
+            arrow.style.display = 'none';
         }
     } else if (window.innerWidth > 850) {
         // Move link back to nav-left if viewport width is more than 800px
         if (navRight.contains(modelli)) {
             navLeft.insertBefore(modelli, navLeft.firstChild);
             modelli.firstChild.style.color = "#000";
+            arrow.style.display = 'block';
         }
     }
 }
@@ -157,3 +159,17 @@ moveLink();
 
 // Check on window resize
 window.addEventListener('resize', moveLink);
+/*
+#<=====================================================>
+#    Toggling Modelli arrow and Toggling 
+#<=====================================================>
+*/
+const modelliShowbox = document.querySelector('.modelli_showbox');
+const arrow = document.getElementById('arrow');
+
+modelli.addEventListener('click', () => {
+    arrow.classList.toggle('arrow-up');
+    arrow.classList.toggle('arrow-down');
+    modelliShowbox.classList.toggle('hidden');
+    overlay.classList.toggle('show');
+});

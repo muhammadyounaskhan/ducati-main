@@ -396,6 +396,89 @@ img {
     min-width: 100px;
   }
 }
+.modelli {
+  width: max-content;
+  a {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+    column-gap: 1rem;
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 7px solid #ddd;
+      margin-bottom: 2px;
+    }
+    .arrow-up {
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 7px solid #ddd;
+      margin-bottom: 2px;
+    }
+  }
+  #modelli__showbox {
+    width: 100%;
+    height: 425%;
+    position: absolute;
+    top: 6.5rem;
+    left: 0;
+    background-color: #fafafa;
+    border-top: 1px solid #ddd;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    .small-card {
+      flex: 1 1 100px;
+      max-width: 140px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 2rem;
+      &__img {
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-left: 0;
+      }
+      &__title {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      &__price {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: $mid-grey;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .scrambler-logo {
+        width: 100%;
+        background-color: #ffd201;
+        padding: 0.6rem 1.1rem;
+        text-align: center;
+        &__img {
+          width: 100%;
+          object-fit: cover;
+          margin-left: 0;
+          filter: brightness(0) contrast(100%);
+        }
+      }
+      .new {
+        font-size: 0.8rem;
+        color: #cb1517;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
 
 /*#<============[LINKS FOR SMALLER SCREEN]============>#*/
 // @media screen and (max-width: 990px) {
