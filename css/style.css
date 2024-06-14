@@ -814,9 +814,6 @@ img {
 #                 Modelli Link
 #<=====================================================>
 */
-.modelli {
-  width: max-content;
-}
 .modelli a {
   display: grid;
   grid-template-columns: 4fr 1fr;

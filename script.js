@@ -30,6 +30,7 @@ const bottomNav = document.querySelector('.bottom-nav');
 const floatedNav = document.getElementById('floatedNav');
 const overlay = document.getElementById('overlay-body');
 const links = document.querySelectorAll('.top-nav a');
+const modelliLink = document.querySelector('.modelli a');
 const windowWidth = window.innerWidth;
 checkbox.addEventListener('change', () => {
     if (bottomNav) {
@@ -44,7 +45,13 @@ checkbox.addEventListener('change', () => {
             })
         } else {
             links.forEach((link) => {
-                link.style.color = "#000";
+                if (window.innerWidth <= 850 && link === modelliLink) {
+                    link.style.color = "#cc0000";
+                } else {
+
+                    link.style.color = "#000";
+                }
+
             })
 
         }
@@ -193,8 +200,8 @@ window.addEventListener('scroll', function () {
 
 // const modelli = document.querySelector('.modelli');
 const navRight = document.querySelector('.nav-right .links');
+const navLeft = document.querySelector('.nav-left .links');
 function moveLink() {
-    const navLeft = document.querySelector('.nav-left .links');
 
 
     if (window.innerWidth <= 850) {
@@ -204,6 +211,7 @@ function moveLink() {
             modelli.style.display = 'block';
             modelli.firstChild.style.color = "#CB1517";
             arrow.style.display = 'none';
+            console.log("hello");
         }
 
     } else if (window.innerWidth > 850) {
@@ -212,6 +220,7 @@ function moveLink() {
             navLeft.insertBefore(modelli, navLeft.firstChild);
             arrow.style.display = 'block';
             modelli.firstChild.style.color = "#000";
+            console.log("resized");
         }
     }
 }
@@ -245,14 +254,13 @@ checkbox.addEventListener('click', () => {
     const viewportWidth = window.innerWidth;
 
     if (viewportWidth < 850 && checkbox.checked) {
-        navRightElement.style.transform = 'translateY(-300px)';
-        logo.style.transform = 'translateY(-300px)';
-        console.log('Viewport is less than 850px and checkbox is checked');
+        navRightElementChild.style.display = 'none';
+        logo.style.display = 'none';
+        modelli.firstChild.style.color = "#cc0000";
         rightNav.appendChild(right);
     } else {
-        navRightElement.style.transform = 'translateY(0)';
-        navRightElementChild.style.color = "#cc0000";
-        logo.style.transform = 'translateY(0)';
+        // navRightElementChild.style.display = 'inline-block';
+        logo.style.display = 'block';
         nav.appendChild(right);
 
 
