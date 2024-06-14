@@ -120,7 +120,40 @@ Array.from(circularButtons).forEach(button => {
 
 /*
 #<=====================================================>
-#                 LINKS HOVER JAVASCRIPT
+#                 Modelli jump from left to right
 #<=====================================================>
 */
 
+// const modelli = document.querySelector('.modelli');
+// const navLeft = document.querySelector('.nav-left .links');
+// const navRight = document.querySelector('.nav-right .links');
+// if (modelli) {
+//     navRight.appendChild(modelli);
+// }
+function moveLink() {
+    const navLeft = document.querySelector('.nav-left .links');
+    const navRight = document.querySelector('.nav-right .links');
+    const modelli = document.querySelector('.modelli');
+
+
+    if (window.innerWidth <= 850) {
+        // Move link to nav-right if viewport width is 800px or less
+        if (navLeft.contains(modelli)) {
+            navRight.appendChild(modelli);
+            modelli.style.display = 'block';
+            modelli.firstChild.style.color = "#CB1517";
+        }
+    } else if (window.innerWidth > 850) {
+        // Move link back to nav-left if viewport width is more than 800px
+        if (navRight.contains(modelli)) {
+            navLeft.insertBefore(modelli, navLeft.firstChild);
+            modelli.firstChild.style.color = "#000";
+        }
+    }
+}
+
+// Initial check
+moveLink();
+
+// Check on window resize
+window.addEventListener('resize', moveLink);

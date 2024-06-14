@@ -152,6 +152,14 @@ img {
     font-size: 0.8rem;
     font-weight: 600;
   }
+  .logo {
+    width: 50px;
+    height: 50px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 .bottom-nav {
   display: flex;
@@ -208,6 +216,7 @@ img {
     column-gap: 1rem;
     list-style: none;
     overflow-x: auto;
+    justify-content: start;
     a {
       color: $primary-black;
       text-transform: uppercase;
@@ -230,7 +239,7 @@ img {
 
     &_item {
       &:not(:last-child) {
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 850px) {
           display: none;
         }
       }
@@ -251,18 +260,14 @@ img {
 .top-nav {
   @media screen and (max-width: 1050px) {
     .links {
-      &_item:first-child {
+      &_item:last-child {
         display: none;
       }
       justify-content: space-between;
     }
   }
 }
-@media screen and (max-width: 800px) {
-  .nav-left {
-    column-gap: 30vw;
-  }
-}
+
 .top-nav {
   @media screen and (max-width: 700px) {
     .nav-left {
@@ -332,6 +337,7 @@ img {
       }
       .sub_link_content {
         flex: 1 1 calc(100% - 200px);
+        padding-top: 4rem !important;
       }
     }
   }
