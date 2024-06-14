@@ -195,3 +195,27 @@ document.querySelector('.modelli').addEventListener('click', function () {
 
     });
 });
+/*
+#<=====================================================>
+#                 Navbar links hiding after scrolling
+#<=====================================================>
+*/
+window.addEventListener('scroll', function () {
+    const topNav = document.querySelector('.top-nav');
+    const leftNavElement = document.querySelector('.nav-left > ul');
+    const logo = document.querySelector('.logo');
+    const rightNav = document.querySelector('.nav-right');
+
+
+    if (window.scrollY > 1200) { // Adjust the distance as needed
+        leftNavElement.classList.add('hidden');
+        logo.classList.add('hidden');
+        rightNav.classList.add('hidden');
+        floatedNav.classList.add('change-nav');
+    } else {
+        leftNavElement.classList.remove('hidden');
+        logo.classList.remove('hidden');
+        rightNav.classList.remove('hidden');
+        floatedNav.classList.remove('change-nav');
+    }
+});
