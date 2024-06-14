@@ -109,7 +109,7 @@ dot2.addEventListener('click', () => {
 #<=====================================================>
 #                 Shopping Card JavaScript
 #<=====================================================>
-*/
+    */
 
 const circularButtons = document.getElementsByClassName('circular-button');
 const closeBtn = document.querySelector('.icon-1');
@@ -131,46 +131,11 @@ Array.from(circularButtons).forEach(button => {
 
 /*
 #<=====================================================>
-#                 Modelli jump from left to right
-#<=====================================================>
-*/
-
-const modelli = document.querySelector('.modelli');
-function moveLink() {
-    const navLeft = document.querySelector('.nav-left .links');
-    const navRight = document.querySelector('.nav-right .links');
-
-
-    if (window.innerWidth <= 850) {
-        // Move link to nav-right if viewport width is 850px or less
-        if (navLeft.contains(modelli)) {
-            navRight.appendChild(modelli);
-            modelli.style.display = 'block';
-            modelli.firstChild.style.color = "#CB1517";
-            arrow.style.display = 'none';
-        }
-    } else if (window.innerWidth > 850) {
-        // Move link back to nav-left if viewport width is more than 850px
-        if (navRight.contains(modelli)) {
-            navLeft.insertBefore(modelli, navLeft.firstChild);
-            modelli.firstChild.style.color = "#000";
-            arrow.style.display = 'block';
-        }
-    }
-}
-
-// Initial check
-moveLink();
-
-// Check on window resize
-window.addEventListener('resize', moveLink);
-/*
-#<=====================================================>
 #    Toggling Modelli arrow and Toggling 
 #<=====================================================>
 */
+const modelli = document.querySelector('.modelli');
 const modelliShowbox = document.querySelector('.modelli_showbox');
-const arrow = document.getElementById('arrow');
 
 modelli.addEventListener('click', () => {
     arrow.classList.toggle('arrow-up');
@@ -192,7 +157,6 @@ document.querySelector('.modelli').addEventListener('click', function () {
     topNavLinks.forEach(link => {
         link.classList.toggle('faded');
 
-
     });
 });
 /*
@@ -200,10 +164,10 @@ document.querySelector('.modelli').addEventListener('click', function () {
 #                 Navbar links hiding after scrolling
 #<=====================================================>
 */
+const logo = document.querySelector('.logo');
 window.addEventListener('scroll', function () {
     const topNav = document.querySelector('.top-nav');
     const leftNavElement = document.querySelector('.nav-left > ul');
-    const logo = document.querySelector('.logo');
     const rightNav = document.querySelector('.nav-right');
 
 
@@ -217,5 +181,80 @@ window.addEventListener('scroll', function () {
         logo.classList.remove('hidden');
         rightNav.classList.remove('hidden');
         floatedNav.classList.remove('change-nav');
+    }
+});
+
+
+/*
+#<=====================================================>
+#                 Modelli jump from left to right
+#<=====================================================>
+*/
+
+// const modelli = document.querySelector('.modelli');
+const navRight = document.querySelector('.nav-right .links');
+function moveLink() {
+    const navLeft = document.querySelector('.nav-left .links');
+
+
+    if (window.innerWidth <= 850) {
+        // Move link to nav-right if viewport width is 850px or less
+        if (navLeft.contains(modelli)) {
+            navRight.appendChild(modelli);
+            modelli.style.display = 'block';
+            modelli.firstChild.style.color = "#CB1517";
+            arrow.style.display = 'none';
+        }
+
+    } else if (window.innerWidth > 850) {
+        // Move link back to nav-left if viewport width is more than 850px
+        if (navRight.contains(modelli)) {
+            navLeft.insertBefore(modelli, navLeft.firstChild);
+            arrow.style.display = 'block';
+            modelli.firstChild.style.color = "#000";
+        }
+    }
+}
+
+// Initial check
+const arrow = document.getElementById('arrow');
+moveLink();
+
+// Check on window resize
+window.addEventListener('resize', moveLink);
+
+/*
+
+
+
+
+
+/*
+#<=====================================================>
+#                 Vanishing logo and nav-right
+#<=====================================================>
+*/
+
+const navRightElement = document.querySelector('.modelli');
+const navRightElementChild = document.querySelector('.modelli a');
+const nav = document.querySelector('.nav');
+const right = document.querySelector('.right');
+const rightNav = document.querySelector('.nav-right');
+
+checkbox.addEventListener('click', () => {
+    const viewportWidth = window.innerWidth;
+
+    if (viewportWidth < 850 && checkbox.checked) {
+        navRightElement.style.transform = 'translateY(-300px)';
+        logo.style.transform = 'translateY(-300px)';
+        console.log('Viewport is less than 850px and checkbox is checked');
+        rightNav.appendChild(right);
+    } else {
+        navRightElement.style.transform = 'translateY(0)';
+        navRightElementChild.style.color = "#cc0000";
+        logo.style.transform = 'translateY(0)';
+        nav.appendChild(right);
+
+
     }
 });
