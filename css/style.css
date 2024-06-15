@@ -662,6 +662,7 @@ img {
 }
 .bottom-nav .links .links_item {
   flex: 1 0 auto;
+  padding: 2.6rem 0;
 }
 
 .top-nav .links {
@@ -706,7 +707,6 @@ img {
 #<=====================================================>
 */
 .links_item:hover .sub_links {
-  display: block;
   display: flex;
   justify-content: start;
   background-color: #fafafa;
@@ -751,7 +751,7 @@ img {
 }
 .sub_links .sub_links_right {
   flex: 0 0 300px;
-  width: 25%;
+  width: 23%;
 }
 @media screen and (max-width: 850px) {
   .sub_links .sub_links_right {
