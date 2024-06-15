@@ -275,20 +275,20 @@ checkbox.addEventListener('click', () => {
 #<=====================================================>
 */
 
-// document.querySelectorAll('.links_item').forEach(item => {
-//     item.addEventListener('click', function () {
-//         // Remove the 'visible' class from all sub_links
-//         document.querySelectorAll('.sub_links').forEach(subLink => {
-//             subLink.classList.remove('visible');
-//         });
+document.querySelectorAll('.links_item').forEach(item => {
+    item.addEventListener('click', function () {
+        // Remove the 'visible' class from all sub_links
+        document.querySelectorAll('.sub_links').forEach(subLink => {
+            subLink.classList.remove('visible');
+        });
 
-//         // Toggle the 'visible' class on the clicked sub_links
-//         if (window.innerWidth > 800) {
+        // Toggle the 'visible' class on the clicked sub_links
+        if (window.innerWidth > 800) {
 
-//             const subLinks = this.querySelector('.sub_links');
-//             if (subLinks) {
-//                 subLinks.classList.toggle('visible');
-//             }
-//         }
-//     });
+            const subLinks = this.querySelector('.sub_links');
+            if (subLinks) {
+                subLinks.classList.toggle('visible');
+            }
+        }
+    });
 // });
