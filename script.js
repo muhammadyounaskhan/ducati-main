@@ -291,4 +291,4 @@ document.querySelectorAll('.links_item').forEach(item => {
             }
         }
     });
-// });
+});
