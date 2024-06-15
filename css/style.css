@@ -585,7 +585,7 @@ img {
 
 .bottom-nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: start;
   align-self: center;
   position: absolute;
   display: none;
@@ -603,7 +603,8 @@ img {
 
 .height {
   height: 6.5rem;
-  display: block;
+  display: flex;
+  column-gap: 2rem;
 }
 
 .display {
@@ -642,15 +643,24 @@ img {
 .bottom-nav .links {
   display: flex;
   list-style: none;
-  overflow-x: auto;
-  justify-content: start;
+  overflow-y: auto;
+  column-gap: 2rem;
+  align-items: center;
 }
 .bottom-nav .links a {
   color: #0f0f0f;
   text-transform: uppercase;
 }
+@media screen and (max-width: 800px) {
+  .bottom-nav .links {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+    padding: 2rem 0.5rem;
+    overflow: auto;
+  }
+}
 .bottom-nav .links .links_item {
-  padding: 3rem 0;
   flex: 1 0 auto;
 }
 
@@ -1045,6 +1055,13 @@ body {
 .uninteractive {
   pointer-events: none;
   opacity: 0.5;
+}
+
+.visible {
+  display: block !important;
+  height: 50vh;
+  background: #fafafa;
+  border-top: 1px solid #ddd;
 }
 
 .footer {
