@@ -643,7 +643,7 @@ img {
 .bottom-nav .links {
   display: flex;
   list-style: none;
-  overflow-y: auto;
+  overflow-y: hidden !important;
   column-gap: 2rem;
   align-items: center;
 }
@@ -713,12 +713,6 @@ img {
   width: 100%;
   border-top: 1px solid #ddd;
 }
-@media screen and (max-width: 850px) {
-  .links_item:hover .sub_links {
-    flex-direction: column;
-    row-gap: 1rem;
-  }
-}
 
 .sub_links {
   position: absolute;
@@ -729,6 +723,12 @@ img {
   height: 50vh;
   overflow: auto;
   /*#<============[bikes]============>#*/
+}
+@media screen and (max-width: 850px) {
+  .sub_links {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
 }
 .sub_links .sub_links_left {
   padding-bottom: 2rem;
@@ -751,7 +751,7 @@ img {
 }
 .sub_links .sub_links_right {
   flex: 0 0 300px;
-  width: 23%;
+  width: 25%;
 }
 @media screen and (max-width: 850px) {
   .sub_links .sub_links_right {
@@ -793,7 +793,6 @@ img {
   display: flex;
   flex-direction: column;
   row-gap: 0.8rem;
-  min-width: auto;
   padding-bottom: 2rem;
 }
 .sub_links .bike_title {
@@ -1058,7 +1057,7 @@ body {
 }
 
 .visible {
-  display: block !important;
+  display: flex;
   height: 50vh;
   background: #fafafa;
   border-top: 1px solid #ddd;

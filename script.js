@@ -253,6 +253,7 @@ const rightNav = document.querySelector('.nav-right');
 checkbox.addEventListener('click', () => {
     const viewportWidth = window.innerWidth;
 
+
     if (viewportWidth <= 850 && checkbox.checked) {
         navRightElementChild.style.display = 'none';
         logo.style.display = 'none';
@@ -283,7 +284,7 @@ document.querySelectorAll('.links_item').forEach(item => {
         });
 
         // Toggle the 'visible' class on the clicked sub_links
-        if (window.innerWidth > 800) {
+        if (window.innerWidth > 600) {
 
             const subLinks = this.querySelector('.sub_links');
             if (subLinks) {
@@ -292,3 +293,4 @@ document.querySelectorAll('.links_item').forEach(item => {
         }
     });
 });
+
